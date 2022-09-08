@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./ContactDetail.css"
 import Avatar from "../../Assets/avatar4.png"
-import Spinner from '../Spinner/Spinner'
 
 
 function ContactDetail({ changedetailShow, contactsData, idChange, theme }) {
