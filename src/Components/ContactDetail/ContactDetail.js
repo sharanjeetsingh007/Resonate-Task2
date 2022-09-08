@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import "./ContactDetail.css"
 import Avatar from "../../Assets/avatar4.png"
+import Spinner from '../Spinner/Spinner'
 
 
 function ContactDetail({ changedetailShow, contactsData, idChange, theme }) {
 
     // state for filtered data 
     const [filterData, setFilterData] = useState([])
+    const [loader, setLoader] = useState(true)
+
 
     // filter data as soon as got the id from AllContact
     useEffect(() => {
@@ -31,8 +34,18 @@ function ContactDetail({ changedetailShow, contactsData, idChange, theme }) {
                     <h4>Contacts Detail</h4>
                 </div>
                 <div className="contactDetail__info">
-                    <div className="contactDetail__info__left">
-                        <img src={Avatar} alt="profile__image" />
+
+
+
+                    <div className="contactDetail__info__left"
+
+                    >
+                        <img src={Avatar} alt="profile__image"
+                            onLoad={() => setLoader(false)}
+                            style={{ display: loader ? "none" : "flex" }}
+                        />
+                        <img className='skleton' src={Avatar} alt="profile__image" style={{ display: loader ? "flex" : "none" }} />
+
                     </div>
                     <div className="contactDetail__info__right">
                         {filterData.length !== 0 && filterData.map((filtered) => (
@@ -49,6 +62,7 @@ function ContactDetail({ changedetailShow, contactsData, idChange, theme }) {
                 </div>
             </div>
         </div>
+
     )
 }
 
