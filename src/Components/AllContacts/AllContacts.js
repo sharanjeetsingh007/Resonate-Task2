@@ -3,6 +3,7 @@ import ContactsTable from '../ContactsTable/ContactsTable'
 import "./AllContacts.css"
 import SearchIcon from '@mui/icons-material/Search';
 import ContactDetail from '../ContactDetail/ContactDetail';
+import Spinner from '../Spinner/Spinner';
 
 
 
@@ -14,6 +15,7 @@ function AllContacts({ theme }) {
     const [searchValue, setSearchValue] = useState("")
     const [detailShow, setDetailShow] = useState(false)
     const [idChange, setIdChange] = useState(null)
+    const [loader, setLoader] = useState(true)
 
     // change state from child component
     const changedetailShow = (value) => {
@@ -48,14 +50,16 @@ function AllContacts({ theme }) {
                 const response = await request.json();
                 setContactsData(response)
                 setCopyContactsData(response)
+                setLoader(false)
             } catch (err) {
+                setLoader(false)
                 alert(err)
             }
         }
         fetchingDate()
     }, [])
 
-    return (
+    return (<>{loader ? <Spinner /> :
         <>
             {detailShow ? <ContactDetail
                 changedetailShow={changedetailShow}
@@ -103,6 +107,8 @@ function AllContacts({ theme }) {
                 </div>
             }
         </>
+    }
+    </>
     )
 }
 
