@@ -1,0 +1,243 @@
+.allContacts {
+  height: calc(100vh - 70px);
+  padding: 50px;
+  padding-top: 65px;
+  background-color: #eeeff1;
+  transition: all 0.2s;
+}
+
+.allContacts__wrapper {
+  background-color: #fefcfc;
+  height: 100%;
+  border-radius: 30px;
+  transition: all 0.2s;
+}
+
+.allContacts--dark__mode {
+  height: calc(100vh - 70px);
+  padding: 50px;
+  padding-top: 65px;
+  background-color: #242735;
+  color: white;
+  transition: all 0.2s;
+}
+
+.allContacts__wrapper--dark__mode {
+  background-color: #293142;
+  height: 100%;
+  border-radius: 30px;
+  transition: all 0.2s;
+}
+
+.allContacts__heading {
+  padding: 30px 30px 0px 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.allContacts__heading > h4 {
+  font-size: 20px;
+}
+
+.allContacts__heading__search {
+  border: 1px solid black;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.allContacts__heading__search > input {
+  padding: 5px;
+  width: 129px;
+  font-size: 12px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: #9c27b0;
+}
+
+.allContacts__wrapper--dark__mode
+  > .allContacts__heading
+  > .allContacts__heading__search
+  > input {
+  background-color: #293142;
+  color: white;
+  transition: all 0.2s;
+}
+
+.contactsTable {
+  height: 499px;
+  max-height: 510px;
+  overflow: scroll;
+}
+
+.contactsTable__header {
+  border-bottom: 1px solid black;
+  padding: 5px;
+  padding-left: 30px;
+  height: 60px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #fefcfc;
+  transition: all 0.2s;
+}
+
+.contactsTable__header--dark__mode {
+  border-bottom: 1px solid black;
+  padding: 5px;
+  padding-left: 30px;
+  height: 60px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #293142;
+  transition: all 0.2s;
+}
+
+.contactsTable__header > h4 {
+  width: 130px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contactsTable__header--dark__mode > h4 {
+  width: 130px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 912px) and (min-height: 1368px) {
+  .contactsTable {
+    height: 1010px;
+    max-height: 1010px;
+  }
+}
+
+@media (max-width: 820px) and (min-height: 1180px) {
+  .contactsTable {
+    height: 1210px;
+    max-height: 900px;
+  }
+}
+
+@media (max-width: 768px) and (min-height: 1024px) {
+  .contactsTable {
+    height: 710px;
+    max-height: 710px;
+  }
+}
+
+@media (max-width: 540px) and (max-height: 720px) {
+  .contactsTable {
+    height: 410px;
+    max-height: 420px;
+  }
+
+  .contactsTable__header {
+    padding-left: 9px;
+  }
+}
+@media (max-height: 896px) {
+  .contactsTable__header > h4 {
+    padding-left: 0px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 414px) and (min-height: 896px) {
+  .contactsTable {
+    height: 710px;
+    max-height: 620px;
+  }
+  .contactsTable__header {
+    padding-left: 0;
+  }
+  .contactsTable__header > h4 {
+    padding-left: 0px;
+    padding-right: 5px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 390px) and (min-height: 844px) {
+  .contactsTable__header {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 393px) {
+  .contactsTable {
+    height: 499px;
+    max-height: 530px;
+  }
+  .contactsTable__header {
+    padding-left: 0px;
+  }
+
+  .contactsTable__header > h4 {
+    padding-left: 0px;
+    padding-right: 5px;
+    font-size: 13px;
+  }
+
+  .allContacts__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .allContacts__heading > h4 {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 375px) and (min-height: 896px) {
+  .contactsTable {
+    height: 540px;
+    max-height: 340px;
+  }
+}
+
+@media (max-width: 360px) and (min-height: 740px) {
+  .contactsTable {
+    height: 540px;
+    max-height: 420px;
+  }
+
+  .contactsTable__header > h4 {
+    font-size: 12px;
+  }
+
+  .allContacts__heading > h4 {
+    margin-bottom: 9px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .contactsTable {
+    height: 540px;
+    max-height: 320px;
+  }
+
+  .contactsTable__header > h4 {
+    font-size: 7px;
+  }
+
+  .allContacts__heading > h4 {
+    margin-bottom: 7px;
+  }
+
+  .allContacts__heading__search > input {
+    width: 100px;
+  }
+}
