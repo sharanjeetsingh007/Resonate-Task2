@@ -36,9 +36,7 @@ function ContactDetail({ changedetailShow, contactsData, idChange, theme }) {
 
 
 
-                    <div className="contactDetail__info__left"
-
-                    >
+                    <div className="contactDetail__info__left">
                         <img src={Avatar} alt="profile__image"
                             onLoad={() => setLoader(false)}
                             style={{ display: loader ? "none" : "flex" }}
